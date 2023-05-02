@@ -7,6 +7,7 @@ const CATEGORIES = [
   { name: "health", color: "#14b8a6" },
   { name: "history", color: "#f97316" },
   { name: "news", color: "#8b5cf6" },
+  { name: "poetry", color: "ef6666"}
 ];
 
 const initialFacts = [
