@@ -21,7 +21,7 @@
     <img src="logo.png" height="113" width="113" alt="butterflies logo">
     <h1>Hello Chief Inspector</h1>
     </div>
-    <button>Share a tidbit</button>
+    <button class="btn btn-large">Share a tidbit</button>
   </header>
 
   <form class="main-form">
@@ -34,23 +34,43 @@
       <option value="poetry">Poetry</option>
       <option value="science">Science</option>
     </select>
-    <button>Post</button>
+    <button class="btn btn-large">Post</button>
   </form>
 
   <main class="main">
     <aside>
       <ul>
-        <li><button>All</button></li>
-        <li><button>Technology</button></li>
-        <li></li><button>Poetry</button></li>
-        <li></li><button>Science</button></li>
+        <li class="category"><button class="btn btn-all-categories">All</button></li>
+        <li class="category">
+          <button 
+            class="btn btn-category" 
+            style="background-color:rgb(196, 242, 242)"
+          >
+          Technology
+          </button>
+        </li>
+        <li class="category"> 
+          <button 
+            class="btn btn-category" 
+            style="background-color: lemonchiffon;"
+          >
+          Poetry
+        </button>
+      </li>
+        <li class="category">
+          <button class="btn btn-category"
+          style="background-color: rgb(180, 223, 180);"
+          >
+          Science
+        </button>
+      </li>
       </ul>
     </aside>
     <ul>
       <li class="info">
         <p>
           Kubernetes is an open source orchestration software that allows you to run Docker containers & workloads.
-          <a href="https://azure.microsoft.com/en-us/solutions/kubernetes-vs-docker/" target="_blank">(source)</a>
+          <a class="source" href="https://azure.microsoft.com/en-us/solutions/kubernetes-vs-docker/" target="_blank">(source)</a>
         </p>
   
         <span class="tag" style="background-color: rgb(196, 242, 242);">#technology#</span>
@@ -65,7 +85,7 @@
       <li class="info">
         <p>
           "You do not have to be good."
-          <a href="https://www.vanderbilt.edu/olli/class-materials/2017Summer.MindfulnessWk1.pdf"
+          <a class="source" href="https://www.vanderbilt.edu/olli/class-materials/2017Summer.MindfulnessWk1.pdf"
             target="_blank">(source)</a>
         </p>
       
