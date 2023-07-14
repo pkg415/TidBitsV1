@@ -14,7 +14,7 @@ body {
 /* layout */
 
 .container {
-  max-width: 1000px;
+  max-width: 1400px;
   background-color: #fed7aa;
   margin: 0 auto;
 }
@@ -40,8 +40,36 @@ body {
   background-color: #fee2e2;
   margin-bottom: 40px;
   padding: 16px 40px;
-  border: 4px solid purple;
+  border: 4px solid rgb(128, 105, 0);
+  display: flex;
+  align-items: center;
+  border-radius: 16px;
+}
 
+.main-form input, 
+.main-form select {
+  width: 220px;
+  background-color: #ffedd5;
+  border: none;
+  border-radius: 100px;
+  padding: 16px;
+  font-size: 18px;
+  color: inherit;
+  font-family: inherit;
+}
+
+/* .main-form input::placeholder {
+  color: #fff7ed;
+} */
+
+.main-form input:first-child {
+  flex-grow: 1;
+}
+
+.main-form span {
+  font-weight: 600;
+  font-size: 18px;
+  margin-right: 18px;
 }
 
 .main {
@@ -73,6 +101,7 @@ h1 {
   display: flex;
   align-items: center;
   gap: 24px;
+  border-radius: 16px;;
 }
 
 .tag {
@@ -82,6 +111,25 @@ h1 {
 
 .vote-buttons {
   margin-left: auto;
+  flex-shrink: 0;
+  display: flex;
+  gap: 8px;
+}
+
+.vote-buttons button {
+  background-color: aliceblue;
+  border: none;
+  border-radius: 50px;
+  font-size: 16px;
+  padding: 6px 12px;
+  color: inherit;
+  font-family: inherit;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.vote-buttons button:hover {
+background-color:rgb(98, 5, 98)
 }
 
 ul {
@@ -109,12 +157,14 @@ ul {
 
 .btn {
   border: none;
+  border-radius: 30px;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   line-height: 1;
   font-size: 17px;
   text-transform: uppercase;
   padding: 16px 0 13px;
   background-image: linear-gradient(135deg, purple, rgb(196, 242, 242), lemonchiffon, rgb(180, 223, 180));
+  cursor: pointer;
   transition: 0.3s;
 }
 
@@ -136,3 +186,5 @@ ul {
   width: 100%;
   background-image: none;
 }
+
+
