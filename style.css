@@ -10,6 +10,11 @@ body {
   font-family: "Merriweather", serif;
   padding: 48px 60px;
 }
+/* !important over-rides other formats */
+
+.hidden {
+  display: none !important;
+}
 
 /* layout */
 
