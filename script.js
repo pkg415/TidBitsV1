@@ -61,9 +61,11 @@ const CATEGORIES = [
   { name: "health", color: "#14b8a6" },
   { name: "history", color: "#f97316" },
   { name: "news", color: "#8b5cf6" },
+  { name: "words", color: "rgb(100, 200, 250"},
   { name: "poetry", color: "fffacd" }
 ];
 
+console.log(CATEGORIES.find((cat) => cat.name === "science").color);
 console.log("Hello whirled");
 
 const btn = document.querySelector('.btn-open');
@@ -86,7 +88,9 @@ const res = await fetch("https://pcqfdrqooxgohfqmopsk.supabase.co/rest/v1/info",
 }
 );
 const data = await res.json();
+// const filteredData = data.filter((entry) => entry.category === "technology");
 createFactsList(data);
+
 };
 function createFactsList(dataArray) {
 
@@ -99,10 +103,11 @@ const htmlArr = dataArray.map((fact) =>`<li class="info">
     target="_blank"  
     >(Source)</a>
   </p>
-  <span class="tag" style="">${fact.category}</span>
-  </li>`);
+  <span class="tag" style="background-color: ${CATEGORIES.find((cat) => cat.name === fact.category).color}">${fact.category}</span>
+  </li>`
+  );
 
-console.log(htmlArr);
+// console.log(htmlArr);
 const html = htmlArr.join("");
 factsList.insertAdjacentHTML("afterbegin", html);
 };
@@ -126,7 +131,7 @@ btn.addEventListener('click', function() {
   }
 })
 
-
+// ${ CATEGORIES.find((cat) => cat.name === fact.category).color }
 
 // let votesInteresting = 23;
 // let votesMindblowing = 23;
